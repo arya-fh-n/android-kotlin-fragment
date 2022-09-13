@@ -25,8 +25,8 @@ class CategoryFragment : Fragment(), View.OnClickListener {
          * Memanggil color resource dengan fungsi [ContextCompat.getColor]
          * lalu menggunakan nilainya sebagai warna dari button
          */
-        val color = ContextCompat.getColor(requireContext(), R.color.teal_200)
-        btnDetailCategory.setBackgroundColor(color)
+        val blueColor = ContextCompat.getColor(requireContext(), R.color.blue_200)
+        btnDetailCategory.setBackgroundColor(blueColor)
 
     }
 
