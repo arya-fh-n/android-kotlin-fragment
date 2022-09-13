@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.title = getString(R.string.action_bar_title)
+
         val mFragmentManager = supportFragmentManager
         val mHomeFragment = HomeFragment()
         val fragment = mFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
