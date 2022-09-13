@@ -10,6 +10,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /**
+         * Memanggil string resource dengan fungsi [getString]
+         * lalu menggunakan nilainya sebagai judul dari actionBar
+         */
+        val actionBarTitle = getString(R.string.action_bar_title)
+        supportActionBar?.title =  actionBarTitle
+
         val mFragmentManager = supportFragmentManager
         val mHomeFragment = HomeFragment()
         val fragment = mFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)

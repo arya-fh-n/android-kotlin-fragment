@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 
 class CategoryFragment : Fragment(), View.OnClickListener {
@@ -19,6 +20,14 @@ class CategoryFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         val btnDetailCategory: Button = view.findViewById(R.id.btn_detail_category)
         btnDetailCategory.setOnClickListener(this)
+
+        /**
+         * Memanggil color resource dengan fungsi [ContextCompat.getColor]
+         * lalu menggunakan nilainya sebagai warna dari button
+         */
+        val blueColor = ContextCompat.getColor(requireContext(), R.color.blue_200)
+        btnDetailCategory.setBackgroundColor(blueColor)
+
     }
 
     override fun onClick(v: View) {
